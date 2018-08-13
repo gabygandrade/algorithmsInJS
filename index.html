@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container main">
+        <h3>Exercises</h3>
+        <h4>Array and String Manipulation </h4>
+        <ul class="collection" id='arrayAndStringList'></ul>
+
+        <h4>Recursion </h4>
+        <ul class="collection" id='recursionList'></ul>
+
+        <h3>Learnings</h3>
+
+        <div id='learningsContainer'>
+            <ul id='processLearningsList' class='browser-default'>
+                <h5>Process</h5>
+                <li>Before start the problem, think about: </li>
+                <ol>
+                    <li>Test scenarios - write these out first</li>
+                    <li>Edge cases - ask if I should address these - like if inputs are all well formatted, what if null or undefined
+                        is passed in</li>
+                </ol>
+                <li>Make sure I "normalize" the input so that I handle differences btw upper & lowercase, punctuation, etc</li>
+                <li>When talking out loud and get stuck - think: what is another way I could think about this? (remember: counterpart
+                    hashtable problem)</li>
+            </ul>
+
+            <ol id='recursionLearningsList' class="browser-default">
+                <h5>Recursion</h5>
+                <strong>Recursive functions work by invoking the same function with a
+                    <em>different input</em> until you reach your
+                    <em>base case</em>
+                </strong>
+                <li>Write "if" - bc there will always be at least 2 cases (base case & recursive case) </li>
+                <li>Handle simplest case</li>
+                <div>Simplest case = base case = no recursive call needed. The condition for which the answer is known </div>
+                <li>Write recursive call(s)</li>
+                <ul class="browser-default">
+                    <li>that call should be passed simpler input, or problem should be made 1 step simpler before recrusive call
+                        (so we don't overflow the stack)</li>
+                    <li>if recursive call returns a value, we can store that value in some variable</li>
+                </ul>
+                <li>Assume recrusive call works. Ask yourself: What does it do? How does it help?</li>
+                </u>
+            </ol>
+        </div>
+    </div>
+    <script src="populateContent.js"></script>
+    <script src="exercises/numWaysStaircase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+
+</html>
